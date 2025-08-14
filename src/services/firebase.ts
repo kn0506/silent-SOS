@@ -4,13 +4,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBs7Wl1rj9uJ_zC-WHLaiZ66NOtAhMu8Rc",
-  authDomain: "livemate-b6218.firebaseapp.com",
-  projectId: "livemate-b6218",
-  storageBucket: "livemate-b6218.firebasestorage.app",
-  messagingSenderId: "423860807917",
-  appId: "1:423860807917:web:1519e2dd9465ec5bf9c4e4",
-  measurementId: "G-6E1VY4XBMR",
+  apiKey: "AIzaSyD_1_w_Xoxt0M0HuO1k6tQvSg0_fkQFfH4",
+  authDomain: "silent-sos-ba136.firebaseapp.com",
+  projectId: "silent-sos-ba136",
+  storageBucket: "silent-sos-ba136.firebasestorage.app",
+  messagingSenderId: "822141177367",
+  appId: "1:822141177367:web:4bacdb84215ecdf7081652",
+  measurementId: "G-9FJZKGY0EP",
 };
 
 const app = initializeApp(firebaseConfig);

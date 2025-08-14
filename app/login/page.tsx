@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { auth, provider } from "../firebase";
 import { signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useAuthStore } from "../store/useAuthStore";
+import { useAuthStore } from "@/store/useAuthStore";
+import { auth, provider } from "@/services/firebase";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");

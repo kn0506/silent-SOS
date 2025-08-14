@@ -1,9 +1,9 @@
 "use client";
 
-import { auth } from "../firebase";
+import { auth } from "@/services/firebase";
+import { useAuthStore } from "@/store/useAuthStore";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useAuthStore } from "../store/useAuthStore";
 
 export default function LogoutPage() {
   const router = useRouter();
