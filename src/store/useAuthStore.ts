@@ -1,13 +1,15 @@
-// store/authStore.ts
-import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { create } from "zustand";
+import { persist } from "zustand/middleware";
 
-type AuthState = {
+export interface AuthState {
   isAuth: boolean;
   setAuth: (auth: boolean) => void;
   logout: () => void;
-};
+}
 
+/**
+ * ログイン情報をローカルストレージに保存
+ */
 export const useAuthStore = create<AuthState>()(
   // persist: Zustandの状態が自動的にlocalStorageに保存される。
   persist(
@@ -17,7 +19,7 @@ export const useAuthStore = create<AuthState>()(
       logout: () => set({ isAuth: false }),
     }),
     {
-      name: 'auth-storage', // localStorage key
+      name: "auth-storage", // localStorage key
     }
   )
 );

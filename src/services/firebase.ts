@@ -3,6 +3,9 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+/**
+ * firebase サービス
+ */
 const firebaseConfig = {
   apiKey: "AIzaSyD_1_w_Xoxt0M0HuO1k6tQvSg0_fkQFfH4",
   authDomain: "silent-sos-ba136.firebaseapp.com",

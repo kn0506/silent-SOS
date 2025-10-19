@@ -6,11 +6,15 @@ import { useRouter } from "next/navigation";
 import { useAuthStore } from "@/store/useAuthStore";
 import { auth, provider } from "@/services/firebase";
 
-export default function LoginPage() {
+/**
+ * ログインページ
+ */
+export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
 
+  /** ログイン処理 */
   const loginWithGoogle = async () => {
     // Googleログイン用のポップアップを開いて認証する
     await signInWithPopup(auth, provider);
@@ -49,7 +53,7 @@ export default function LoginPage() {
           className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
           onClick={loginWithGoogle}
         >
-          ログイン
+          gmailでLogin
         </button>
       </div>
     </div>

@@ -5,9 +5,13 @@ import { useAuthStore } from "@/store/useAuthStore";
 import { signOut } from "firebase/auth";
 import { useRouter } from "next/navigation";
 
-export default function LogoutPage() {
+/**
+ * ログアウトページ
+ */
+export default function Logout() {
   const router = useRouter();
 
+  /** ログアウト処理 */
   const logout = async () => {
     // Firebase認証でユーザーをログアウト
     await signOut(auth);
@@ -25,7 +29,7 @@ export default function LogoutPage() {
           className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700"
           onClick={logout}
         >
-          ログアウトする
+          Logout
         </button>
       </div>
     </div>

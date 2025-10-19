@@ -1,35 +1,28 @@
 "use client";
 
-import Image from "next/image";
+import EmergencyButton from "@/components/EmergencyButton";
 
+/**
+ * ホーム画面
+ */
 export default function Home() {
-
-  const startChat = () => {
-
-  }
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <div className="flex gap-4 items-center flex-col sm:flex-row">
-        <h1>Meet Someone to chat with before the live?</h1>
-        <Image className="" src="/chat.avif" alt="" width={100} height={200} />
-      </div>
-
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <div className="flex space-x-4">
-            <button
-              className="bg-white text-black border border-black px-6 py-3 rounded-lg shadow"
-              onClick={startChat}
-            >
-              Yes
-            </button>
-            <button className="bg-black text-white px-6 py-3 rounded-lg shadow">
-              No
-            </button>
-          </div>
+    <div className="flex flex-col items-center justify-items-center p-4 bg-gray-100 min-h-screen w-full">
+      <div className="bg-white rounded-xl shadow-md w-full max-w-md divide-y divide-gray-200 my-4">
+        <div className="p-6 text-center">
+          <h2 className="text-sm text-gray-500">eventName</h2>
+          <p className="text-2xl font-semibold text-gray-800">
+            新木場STUDIO COAST
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center"></footer>
+        <div className="p-6 text-center">
+          <h2 className="text-sm text-gray-500">block/seat</h2>
+          <p className="text-2xl font-semibold text-gray-800">A</p>
+        </div>
+      </div>
+      <div className="w-full flex justify-center my-4">
+        <EmergencyButton />
+      </div>
     </div>
   );
 }
